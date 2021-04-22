@@ -1,13 +1,28 @@
-export default function Home(props) {
-  console.log(props.episodes)
+import { GetStaticProps } from 'next';
+import { format, parseISO } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+import { api } from '../services/api';
+import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
 
-  // Consumo de API em SPA (React e Next)
-  // Não é uma boa opção para o SEO e indexação, pois só serão carregadas as informações depois de carregada a página
-  // useEffect(() => {
-  //   fetch('http://localhost:3333/episodes')
-  //     .then(response => response.json())
-  //     .then(data => console.log(data))
-  // }, [])
+type Episode = {
+  id: string;
+  title: string;
+  members: string;
+  publishedAt: string;
+  thumbnail: string;
+  description: string;
+  url: string;
+  type: string;
+  duration: number;
+  durationAsString: string;
+}
+
+type HomeProps = {
+  episodes: Episode[]
+}
+
+export default function Home(props: HomeProps) {
+  console.log(props.episodes)
 
   return (
     <div>
@@ -17,30 +32,35 @@ export default function Home(props) {
   )
 }
 
-// Consumo de API em SSR (Next)
-// Dentro de qualquer arquivo da pasta pages deve se importar uma função getServerSideProps()
-// export async function getServerSideProps() {
-//   const response = await fetch('http://localhost:3333/episodes')
-//   const data = await response.json()
-    
-//   return {
-//     props: {
-//       episodes: data
-//     }
-//   }
-// }
-
 // Consumo de API em SSG (Next)
-// Útil para deixar a aplicação mais performática no caso de conteúdo que não muda tanto em questão de tempo
-export async function getStaticProps() {
-  const response = await fetch('http://localhost:3333/episodes')
-  const data = await response.json()
+export const getStaticProps: GetStaticProps = async() => {
+  const { data } = await api.get('/episodes', {
+    params: {
+      _limit: 12,
+      _sort: 'published_at',
+      _order: 'desc'
+    }
+  })
+
+  const episodes = data.map(episode => {
+    return {
+      id: episode.id,
+      title: episode.title,
+      members: episode.members,  
+      publishedAt: format(parseISO(episode.published_at), "d MMM yy", { locale: ptBR }),
+      thumbnail: episode.thumbnail,
+      description: episode.description,
+      url: episode.file.url,
+      // type: episode.file.type,
+      duration: Number(episode.file.duration),
+      durationAsString: convertDurationToTimeString(Number(episode.file.duration)),
+    }
+  })
     
   return {
     props: {
-      episodes: data
+      episodes
     },
-    // Propriedade que recebe o tempo em que tem que gerar uma nova versão da página em segundos, ou seja, fazer uma nova requisição para gerar um novo HTML (conteúdo estático) a ser servido para os usuários dentro do período de tempo indicado
     revalidate: 60 * 60 * 8
   }
 }
