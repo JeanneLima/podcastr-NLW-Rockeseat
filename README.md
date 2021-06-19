@@ -1,4 +1,4 @@
-# NLW - Acelerando sua evolução - RocketSeat
+# NLW #5 - Acelerando sua evolução - RocketSeat
 
 ## 🎧 Podcastr - O projeto
 > Projeto Podcastr desenvolvido durante a trilha de ReactJS da Next Level Week #5 organizado pela Rocketseat. 
@@ -12,7 +12,7 @@ Este é um projeto com suporte à SSR (Server Side Rendering) através do [Next.
 
 Foi construído usando como base o [Protótipo no FIGMA](https://www.figma.com/file/ERcgB19oHo19l9TvYN9ccZ/Podcastr---NLW%235---Rocketseat?node-id=160%3A2761). É necessário ter conta na plataforma para conseguir visualizar o conteúdo.
 
-## 📌 Principais Tecnologias:
+## 📌 Principais Tecnologias
 - [ReactJS](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Next.js](https://nextjs.org/)
@@ -81,4 +81,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.c
 
 Realizado em Abril de 2021. 
 Feito com 💜 por Jeanne Lima.
-+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jeannecslima/)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jeannecslima/)
