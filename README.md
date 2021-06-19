@@ -1,34 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NLW - Acelerando sua evolução - RocketSeat
 
-## Getting Started
+## 🎧 Podcastr - O projeto
+> Projeto Podcastr desenvolvido durante a trilha de ReactJS da Next Level Week #5 organizado pela Rocketseat. 
+> Plataforma web para ouvir podcasts.
 
-First, run the development server:
+Este é um projeto com suporte à SSR (Server Side Rendering) através do [Next.js](https://nextjs.org/) e criado a partir do [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Foi construído usando como base o [Protótipo no FIGMA](https://www.figma.com/file/ERcgB19oHo19l9TvYN9ccZ/Podcastr---NLW%235---Rocketseat?node-id=160%3A2761). É necessário ter conta na plataforma para conseguir visualizar o conteúdo.
+
+## 📌 Principais Tecnologias:
+- [ReactJS](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [Sass](https://sass-lang.com/)
+
+## 📂 Instalação 
+Primeiramente, é importante que você tenha instalado o [Node.js](https://nodejs.org/en/download/) e o [Yarn](https://yarnpkg.com/) ou [NPM](https://www.npmjs.com/).
+
+Então, execute a seguinte linha de comando no seu terminal para clonar o projeto via HTTPS:
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/JeanneLima/podcastr-NLW-Rockeseat.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Os SSH URLs fornecem acesso a um repositório de Git via SSH, um protocolo seguro. Se você tiver uma chave SSH registrada em sua conta do Github, clone o projeto usando este comando:
+```bash
+git@github.com:JeanneLima/podcastr-NLW-Rockeseat.git
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Acesse a pasta abaixo:
+```
+cd podcastr
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Siga fazendo a instalação das dependências do projeto:
+```bash
+yarn
+# ou
+npm install
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🚀 Executando o projeto
 
-## Learn More
+Para rodar o projeto em ambiente de desenvolvimento basta dar os seguintes comandos no terminal:
+```bash
+# Rode a API fake do JSON Server
+yarn server
+# ou
+npm run server
 
-To learn more about Next.js, take a look at the following resources:
+# Rode o servidor de desenvolvimento
+yarn dev
+# ou
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Caso queira visualizar a versão de produção, o comando abaixo inicia o servidor node:
+```
+yarn start
+# ou
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+A aplicação ficará disponível no browser em [http://localhost:3000](http://localhost:3000).
 
-## Deploy on Vercel
+## 💻 Build
+Para fazer o build da aplicação dê o comando abaixo:
+```
+yarn build
+# ou
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 Licença
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/JeanneLima/podcastr-NLW-Rockeseat/blob/main/LICENSE) para mais detalhes. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Realizado em Abril de 2021. 
+Feito com 💜 por Jeanne Lima.
++[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jeannecslima/)
