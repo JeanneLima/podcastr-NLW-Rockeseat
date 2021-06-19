@@ -4,6 +4,10 @@
 > Projeto Podcastr desenvolvido durante a trilha de ReactJS da Next Level Week #5 organizado pela Rocketseat. 
 > Plataforma web para ouvir podcasts.
 
+<h1 align="center">
+  <img alt="Podcastr" title="Podcastr" src=".github/app-preview.png" />
+</h1>
+
 Este é um projeto com suporte à SSR (Server Side Rendering) através do [Next.js](https://nextjs.org/) e criado a partir do [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Foi construído usando como base o [Protótipo no FIGMA](https://www.figma.com/file/ERcgB19oHo19l9TvYN9ccZ/Podcastr---NLW%235---Rocketseat?node-id=160%3A2761). É necessário ter conta na plataforma para conseguir visualizar o conteúdo.
