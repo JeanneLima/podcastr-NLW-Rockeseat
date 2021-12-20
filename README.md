@@ -23,12 +23,12 @@ Primeiramente, é importante que você tenha instalado o [Node.js](https://nodej
 
 Então, execute a seguinte linha de comando no seu terminal para clonar o projeto via HTTPS:
 ```bash
-git clone https://github.com/JeanneLima/podcastr-NLW-Rockeseat.git
+git clone https://github.com/JeanneLima/podcastr-NLW-Rocketseat.git
 ```
 
 Os SSH URLs fornecem acesso a um repositório de Git via SSH, um protocolo seguro. Se você tiver uma chave SSH registrada em sua conta do Github, clone o projeto usando este comando:
 ```bash
-git@github.com:JeanneLima/podcastr-NLW-Rockeseat.git
+git@github.com:JeanneLima/podcastr-NLW-Rocketseat.git
 ```
 
 Acesse a pasta abaixo:
